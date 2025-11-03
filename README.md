@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Khoa CNTT – Đại học Đại Nam</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f6fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* ===== NAV MENU ===== */
+    nav {
+      background-color: #004080;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: #0059b3;
+    }
+
+    /* Dropdown cấp 2 */
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #004080;
+      display: none;
+      flex-direction: column;
+      min-width: 180px;
+    }
+
+    nav ul li:hover ul {
+      display: flex;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+      border-top: 1px solid #0059b3;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      padding: 20px;
+      min-height: 400px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #003366;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* ===== CARD cho tin tức ===== */
+    .news-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      margin: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .news-card .content {
+      padding: 10px;
+    }
+
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ===== FORM ===== */
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0059b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KHOA CÔNG NGHỆ THÔNG TIN – ĐẠI HỌC ĐẠI NAM</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Trang chủ</a></li>
+      <li><a href="#gioi-thieu">Giới thiệu</a></li>
+      <li><a href="#">Đào tạo</a>
+        <ul>
+          <li><a href="#dao-tao-dh">Đại học</a></li>
+          <li><a href="#dao-tao-ts">Thạc sĩ</a></li>
+          <li><a href="#dao-tao-nh">Ngắn hạn</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Sinh viên</a>
+        <ul>
+          <li><a href="#">CLB</a></li>
+          <li><a href="#">Học bổng</a></li>
+          <li><a href="#">Việc làm</a></li>
+        </ul>
+      </li>
+      <li><a href="#tin-tuc">Tin tức</a></li>
+      <li><a href="#lien-he">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Trang chủ -->
+    <section id="home">
+      <h2>Chào mừng đến với Khoa CNTT – Đại học Đại Nam</h2>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section id="gioi-thieu">
+      <h2>Giới thiệu về Khoa CNTT</h2>
+      <p>Khoa Công nghệ thông tin (CNTT) thành lập năm 2009, là nơi đào tạo những chuyên gia công nghệ chất lượng cao, đáp ứng nhu cầu khắt khe của thị trường trong kỷ nguyên số.</p>
+
+      <h3>Tầm nhìn và sứ mệnh</h3>
+      <ul>
+        <li>Đào tạo sinh viên có năng lực thực hành tốt.</li>
+        <li>Hợp tác với doanh nghiệp để nâng cao chất lượng đào tạo.</li>
+        <li>Thúc đẩy nghiên cứu và đổi mới sáng tạo.</li>
+      </ul>
+
+      <h3>Chương trình đào tạo</h3>
+      <table border="1" cellpadding="8" cellspacing="0" style="margin:auto; border-collapse:collapse;">
+        <tr style="background:#ddd;">
+          <th>Bậc đào tạo</th>
+          <th>Thời gian</th>
+          <th>Bằng cấp</th>
+        </tr>
+        <tr>
+          <td>Đại học</td>
+          <td>4 năm</td>
+          <td>Kỹ sư CNTT</td>
+        </tr>
+        <tr>
+          <td>Thạc sĩ</td>
+          <td>2 năm</td>
+          <td>Thạc sĩ CNTT</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Tin tức -->
+    <section id="tin-tuc">
+      <h2>Tin tức mới nhất</h2>
+      <div class="news-container">
+        <div class="news-card">
+          <img src="tintic.jpg" alt="Sinh viên CNTT Đại học Đại Nam: Học trong nghề - làm từ ghế giảng đường">
+          <div class="content">
+            <p>Khác với mô hình đào tạo thuần lý thuyết, 
+            Khoa Công nghệ thông tin và Thiết kế đồ họa của DNU có lợi
+             thế đặc biệt: Trung tâm Công nghệ (TTCN) - nơi các dự án số hóa của toàn trường được triển khai.
+              Đây không chỉ là trung tâm phát triển hạ tầng công nghệ, 
+              mà còn là “phòng lab thực chiến”, nơi sinh viên trực tiếp tham gia vào sản phẩm phục vụ hàng nghìn thầy trò.</p>
+          </div>
+        </div>
+
+        <div class="news-card">
+          <img src="tintuc.jpg" alt="Sinh viên khởi nghiệp">
+          <div class="content">
+            <p>Trong thời đại số hóa toàn diện, 
+            Công nghệ thông tin (CNTT) không chỉ là ngành học
+             “thời thượng” mà còn là cánh cửa dẫn đến những cơ hội 
+             nghề nghiệp rộng mở với thu nhập cao và khả năng phát 
+             triển không giới hạn. Từ lập trình phần mềm, phân tích dữ liệu đến trí tuệ nhân tạo, 
+             chuyển đổi số…, các doanh nghiệp đang không ngừng “khát” nhân lực công nghệ có kỹ năng thực tế và tư duy đổi mới.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Liên hệ -->
+    <section id="lien-he">
+      <h2>Liên hệ với Khoa CNTT</h2>
+      <form action="#" method="post">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Chủ đề:</label>
+        <input type="text" id="subject" name="subject">
+
+        <label for="message">Nội dung:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Khoa CNTT – Đại học Đại Nam</p>
+  </footer>
+
+</body>
+</html>
